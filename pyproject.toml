@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-sanity"
+version = "0.1.0"
+description = "Streaming CSV validation for humans and CI, with no runtime dependencies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Mohamed Osama"}]
+keywords = ["csv", "validation", "cli", "data-quality"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+csv-sanity = "csv_sanity.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
